@@ -4,7 +4,7 @@ PROJECT_FOLDER_NAME=nodmc25-profiling-tutorial
 rm -rf $PROJECT_FOLDER_NAME
 
 # Checkout the repo
-git clone git@github.com:jmuehlig/nodmc25-tutorial-internal.git $PROJECT_FOLDER_NAME
+git clone https://github.com/jmuehlig/nodmc25-profiling-tutorial.git $PROJECT_FOLDER_NAME
 
 # Execute
 cd $PROJECT_FOLDER_NAME

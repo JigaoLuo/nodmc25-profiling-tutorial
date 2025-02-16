@@ -5,7 +5,7 @@ This is the project related to the [NoDMC'25](https://sites.google.com/view/nodm
 You can download and execute the tutorial via
 
 ```bash
-curl https://tu-dortmund.sciebo.de/s/h0tK8uEWsBLTQKl/download | sh
+curl https://raw.githubusercontent.com/jmuehlig/nodmc25-profiling-tutorial/refs/heads/main/script/download-and-execute-tutorial.sh | sh
 ```
 
 or by compiling the code manually:

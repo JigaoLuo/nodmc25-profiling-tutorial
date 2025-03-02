@@ -21,9 +21,12 @@ int main() {
 
     /// Create performance sampler.
     auto counter_definition = perf::CounterDefinition{};
-    auto sampler = perf::Sampler{counter_definition};
+    auto config = perf::SampleConfig{};
+
+    auto sampler = perf::Sampler{counter_definition, config};
     if (perf::HardwareInfo::is_intel()) {
         sampler.trigger("mem-loads", perf::Precision::RequestZeroSkid, perf::Period{4000U});
+        sampler.config().include_kernel(false);
     } else if (perf::HardwareInfo::is_amd()) {
         sampler.trigger("ibs_op_uops", perf::Precision::MustHaveZeroSkid, perf::Period{4000U});
     } else {

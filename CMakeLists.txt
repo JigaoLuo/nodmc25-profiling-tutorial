@@ -40,4 +40,4 @@ add_executable(olc_coro_tree
 )
 
 add_dependencies(olc_coro_tree perf-cpp-external)
-target_link_libraries(olc_coro_tree perf-cpp numa)
+target_link_libraries(olc_coro_tree perf-cpp)

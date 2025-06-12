@@ -14,8 +14,11 @@ int main() {
     /// Create the workload.
     constexpr auto insert_requests = 50000000ULL;
     constexpr auto lookup_requests = 50000000ULL;
-    auto benchmark_set = NumericWorkloadSet{insert_requests, lookup_requests};
     
+    nvtxRangePushA("benchmark dataset"); // Begins NVTX range
+    auto benchmark_set = NumericWorkloadSet{insert_requests, lookup_requests};
+    nvtxRangePop(); // Ends NVTX range
+
     /// Execute the insert_requests phase.
     std::cout << "Executing " << insert_requests << " insert_requests requests..." << std::endl;
     {

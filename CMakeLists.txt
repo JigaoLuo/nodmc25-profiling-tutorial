@@ -40,12 +40,10 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(nvtx)
 
-message("!!!!!!!!!!!!!!!!!!NXTX:'${nvtx_SOURCE_DIR}' mode.")
-
-
 #############################################################
 # Execitable                                                #
 #############################################################
+
 include_directories(
     src
     lib/perf-cpp/src/perf-cpp-external/include
@@ -54,6 +52,7 @@ include_directories(
 )   
 link_directories(lib/perf-cpp/src/perf-cpp-external-build)
 
+# Demo 1
 add_executable(olc_coro_tree_perf
     src/main_perf.cpp
     src/workload/workload_set.cpp
@@ -62,6 +61,7 @@ add_executable(olc_coro_tree_perf
 target_link_libraries(olc_coro_tree_perf pthread)
 add_dependencies(olc_coro_tree_perf perf-cpp-external)
 
+# Demo 2
 add_executable(olc_coro_tree_perfevent
     src/main_perfevent.cpp
     src/workload/workload_set.cpp
@@ -70,6 +70,7 @@ add_executable(olc_coro_tree_perfevent
 add_dependencies(olc_coro_tree_perfevent perf-cpp-external)
 target_link_libraries(olc_coro_tree_perfevent pthread)
 
+# Demo 3
 add_executable(olc_coro_tree_perfcpp
     src/main_perfcpp.cpp
     src/workload/workload_set.cpp
@@ -78,6 +79,7 @@ add_executable(olc_coro_tree_perfcpp
 add_dependencies(olc_coro_tree_perfcpp perf-cpp-external)
 target_link_libraries(olc_coro_tree_perfcpp perf-cpp pthread)
 
+# Demo 4
 add_executable(olc_coro_tree_nvtx
     src/main_nvtx.cpp
     src/workload/workload_set.cpp

@@ -36,7 +36,7 @@ int main() {
     sampler.values().logical_memory_address(true).latency(true).data_src(true);
 
     /// Execute the insert_requests phase.
-    std::cout << "Executing " << insert_requests << " insert_requests requests..." << std::flush;
+    std::cout << "Executing " << insert_requests << " insert_requests requests..." << std::endl;
     CoroutineRoundRobinExecutor::execute(tree, benchmark_set.insert_requests());
     std::cout << "done" << std::endl;
 

@@ -12,7 +12,7 @@ cmake . -DCMAKE_BUILD_TYPE=RelWithDebInfo
 make -j4
 ```
 
-## Demo 1
+## Demo 1: `perf`
 
 ```bash
 $ perf stat ./bin/olc_coro_tree_perf
@@ -26,19 +26,19 @@ $ perf report
 $ ./bin/olc_coro_tree_perfevent
 ```
 
-## Demo 3
+## Demo 3: `perf-cpp`
 
 ```bash
 $ ./bin/olc_coro_tree_perfcpp
 ```
 
-## Demo 4
+## Demo 4: NSYS
 
 ```bash
 $ nsys profile ./bin/olc_coro_tree_nvtx
 # $ nsys profile  --event-sample='system-wide' --os-events='0,1,2,3,4,5,6,7,8' --cpu-core-events='1,2,3' ./bin/olc_coro_tree_nvtx  
 $ scp # to your local
-$ # open it via local nsys
+$ # open it via local nsys-GUI
 ```
 
 ---
